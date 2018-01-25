@@ -44,6 +44,7 @@ namespace ETrade.Controllers
             {
                 if (order == SortOrder.DESC)
                     products = products.OrderByDescending(p => p.Name);
+
                 else
                     products = products.OrderBy(p => p.Name);
             }
