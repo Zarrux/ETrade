@@ -31,7 +31,7 @@ namespace ETrade.Controllers
                 var user = MapFromModel(model);
                 var repository = new UserRepository();
                 repository.Create(user);
-                return RedirectToAction("Index");
+                return RedirectToAction("Login");
             }
             return View(model);
         }
