@@ -10,7 +10,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <div>
-    @using (Html.BeginForm("Index", "Name", FormMethod.Get))
+    @using (Html.BeginForm("Index", "Home", FormMethod.Get))
     {
         @Html.TextBoxFor(model => model.Name)
         @Html.DropDownListFor(model => model.Category, Model.Categories)

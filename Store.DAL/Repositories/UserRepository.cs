@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Store.DAL.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,25 @@ using System.Threading.Tasks;
 
 namespace Store.DAL.Repositories
 {
-    class UserRepository
+   public class UserRepository
     {
+        private StoreDbEntities userDb;
+
+        public UserRepository()
+        {
+            userDb = new StoreDbEntities();
+        }
+
+        public IQueryable<User> GetAll()
+        {
+            return userDb.Users;
+        }
+
+        public void Create(User user)
+        {
+            userDb.Users.Add(user);
+            userDb.SaveChanges();
+        }
+
     }
 }
