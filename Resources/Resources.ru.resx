@@ -117,13 +117,91 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Active" xml:space="preserve">
+    <value>Максимальная длина - 50 символов.</value>
+  </data>
+  <data name="ActiveRequired" xml:space="preserve">
+    <value>активный</value>
+  </data>
+  <data name="AgeRange" xml:space="preserve">
+    <value>Только от 18 до 100</value>
+  </data>
+  <data name="AgeRequired" xml:space="preserve">
+    <value>Добавить возраст</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Максимальная длина - 50 символов.</value>
+  </data>
+  <data name="CategoryRequired" xml:space="preserve">
+    <value>Добавить категорию</value>
+  </data>
+  <data name="ConfirmPasswordLong" xml:space="preserve">
+    <value>Максимальная длина - 50 символов.</value>
+  </data>
+  <data name="ConfirmPasswordRequired" xml:space="preserve">
+    <value>Пароль несовместим</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Максимальная длина - 255 символов.</value>
+  </data>
+  <data name="DescriptionRequired" xml:space="preserve">
+    <value>Добавить описание</value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>Это сообщение недействительно, повторите попытку</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Добавить адрес электронной почты</value>
+  </data>
+  <data name="FirstNameLong" xml:space="preserve">
+    <value>Максимальная длина - 50 символов.</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>Добавить имя</value>
+  </data>
   <data name="Login" xml:space="preserve">
-    <value>Войти</value>
+    <value>Авторизоваться</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Выйти</value>
   </data>
+  <data name="NameLong" xml:space="preserve">
+    <value>Максимальная длина - 255 символов.</value>
+  </data>
+  <data name="NameRequired" xml:space="preserve">
+    <value>Добавить имя</value>
+  </data>
+  <data name="PasswordLong" xml:space="preserve">
+    <value>Максимальная длина - 50 символов.</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Добавить пароль</value>
+  </data>
+  <data name="PhoneLong" xml:space="preserve">
+    <value>Введите только цифры, максимальная длина - 50 символов</value>
+  </data>
+  <data name="PhoneRequired" xml:space="preserve">
+    <value>Добавьте номер телефона</value>
+  </data>
+  <data name="PriceMaximum" xml:space="preserve">
+    <value>Диапазон цен от 1 до 9999999</value>
+  </data>
+  <data name="PriceRequired" xml:space="preserve">
+    <value>Добавить цену</value>
+  </data>
   <data name="Register" xml:space="preserve">
-    <value>Регистрация</value>
+    <value>Зарегистрироваться</value>
+  </data>
+  <data name="SurnameLong" xml:space="preserve">
+    <value>Максимальная длина - 50 символов.</value>
+  </data>
+  <data name="SurnameRequired" xml:space="preserve">
+    <value>Добавить фамилию</value>
+  </data>
+  <data name="UsernameLong" xml:space="preserve">
+    <value>Максимальная длина - 50 символов.</value>
+  </data>
+  <data name="UsernameRequired" xml:space="preserve">
+    <value>Добавить имя пользователя</value>
   </data>
 </root>

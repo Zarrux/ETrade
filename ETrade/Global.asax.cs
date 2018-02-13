@@ -19,5 +19,28 @@ namespace ETrade
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);            
         }
+
+        protected void Application_AcquireRequestState()
+        {
+            try
+            {
+                HttpCookie AuthCookie = Request.Cookies.Get("UserLoginData");
+                if(AuthCookie != null && string .IsNullOrEmpty(AuthCookie.Value) && FormsAuthentication.Decrypt(AuthCookie.Value) != null)
+                {
+                    var ticket = FormsAuthentication.Decrypt(AuthCookie.Value);
+                    var userName = ticket.Name;
+                    Session["User"] = userName;
+                }
+                else
+                {
+                    Session["User"] = null;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                
+            }
+        }
     }
 }

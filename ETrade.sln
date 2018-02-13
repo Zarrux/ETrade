@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrade", "ETrade\ETrade.csproj", "{4A2FD5ED-BC06-4E80-ACE5-12B4DC650E30}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrade.Tests", "ETrade.Tests\ETrade.Tests.csproj", "{35D6D252-213F-4464-BF66-AD36DAB11914}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.DAL", "Store.DAL\Store.DAL.csproj", "{9944FA56-F07E-4546-8F6B-C4E301ED759D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{9944FA56-F07E-4546-8F6B-C4E301ED759D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9944FA56-F07E-4546-8F6B-C4E301ED759D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9944FA56-F07E-4546-8F6B-C4E301ED759D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

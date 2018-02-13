@@ -21,12 +21,27 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Create Account", "Register", "Registration")
-                    </li>
-                    <li>
-                        @Html.ActionLink("Login", "Login", "Login")
-                    </li>
+
+                    @if (Session["User"] != null)
+    {
+                <li><a>@Session["User"]</a></li>
+                <li>
+                    @Html.ActionLink("Logout", "Logout", "Home")
+                </li>
+                    }
+                       else
+                            {
+                <li>
+                    @Html.ActionLink(@Resources.Resources.Register, "Register", "Registration")
+                </li>
+                <li>
+                    @Html.ActionLink(@Resources.Resources.Login, "Login", "Login")
+                </li>
+                <li>
+                    @Html.ActionLink("Logout", "Logout", "Home")
+                </li>
+                        }
+
                 </ul>
             </div>
         </div>

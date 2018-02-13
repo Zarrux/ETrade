@@ -12,6 +12,7 @@ namespace ETrade.Models
         public string Name { get; set; }
         public SortCriteria Criteria { get; set; }
         public SortOrder Order { get; set; }
+        public SearchString Search { get; set; }
         public List<SelectListItem> Categories { get; set; }
 
         public List<ProductViewModel> Products { get; set; }

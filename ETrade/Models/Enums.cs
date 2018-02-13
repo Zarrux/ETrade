@@ -15,4 +15,10 @@ namespace ETrade.Models
         ASC,
         DESC
     }
+
+    public enum SearchString
+    {
+        Name,
+        Category
+    }
 }
