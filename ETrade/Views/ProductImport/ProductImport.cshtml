@@ -1,0 +1,44 @@
+﻿@using ETrade.Models
+@{
+    ViewBag.Title = "ProductImport";
+}
+
+<h2>Product Import</h2>
+@using (Html.BeginForm("ProductImport", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" class="input-box" id="fileToImport" name="fileToImport"/>
+    <input type="submit" value="Upload"/>
+}
+
+<h2>@ViewBag.Result</h2>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Category</td>
+            <td>Active</td>
+            <td>Description</td>
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.Products != null)
+        {
+            var products = ViewBag.Products as List<ProductImportModel>;
+            if(products != null)
+            {
+                foreach(var product in products)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                         <td>@product.Price</td>
+                         <td>@product.Category</td>
+                         <td>@product.Active</td>
+                         <td>@product.Description</td>
+                    </tr>
+                }
+            }
+        }
+    </tbody>
+</table>
+

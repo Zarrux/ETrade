@@ -5,6 +5,19 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="StoreDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IPAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Controller" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Action" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LogType" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Date" Type="date" />
+        </EntityType>
         <EntityType Name="Products">
           <Key>
             <PropertyRef Name="Id" />
@@ -30,6 +43,7 @@
           <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
         <EntityContainer Name="StoreDbModelStoreContainer">
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -40,6 +54,7 @@
         <EntityContainer Name="StoreDbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Users" EntityType="StoreDbModel.User" />
           <EntitySet Name="Products" EntityType="StoreDbModel.Product" />
+          <EntitySet Name="Logs" EntityType="StoreDbModel.Log" />
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -64,6 +79,19 @@
           <Property Name="Category" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Active" Type="Boolean" Nullable="false" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IPAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Controller" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Action" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Method" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LogType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -93,6 +121,20 @@
                 <ScalarProperty Name="Category" ColumnName="Category" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logs">
+            <EntityTypeMapping TypeName="StoreDbModel.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="LogType" ColumnName="LogType" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="Action" ColumnName="Action" />
+                <ScalarProperty Name="Controller" ColumnName="Controller" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="User" ColumnName="User" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>

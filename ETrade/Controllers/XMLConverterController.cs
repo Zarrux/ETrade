@@ -1,4 +1,7 @@
-﻿using Store.DAL.Repositories;
+﻿
+using ETrade.Helper;
+using Store.DAL.Entities;
+using Store.DAL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,9 +15,15 @@ namespace ETrade.Controllers
 {
     public class XMLConverterController : Controller
     {
+        private Log log = new Log();
         // GET: XMLConverter
         public ActionResult Index(string format)
         {
+            log.Action = "AddToBasket";
+            log.IPAddress = Request.UserHostAddress.ToString();
+            log.Method = "Get";
+            log.User = User.Identity.Name;
+
             var products = new ProductRepository().GetAll();
             var xDoc = new XDocument();
             xDoc.Declaration = new XDeclaration("1.0", "utf-8", "no");
@@ -37,6 +46,9 @@ namespace ETrade.Controllers
             var isValid = true;
             var errorMessage = "";
 
+            log.Action = log.Action;
+            Helper.LogHelper.Error(log);
+
             xDoc.Validate(schemas, (o, e) =>
                 {
                 isValid = false;
@@ -50,6 +62,7 @@ namespace ETrade.Controllers
             }
             var sw = new StringWriter();
             xDoc.Save(sw);
+            LogHelper.Info(log);
             return View("","text/xml");
         }
     }

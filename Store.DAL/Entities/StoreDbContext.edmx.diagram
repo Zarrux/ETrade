@@ -7,6 +7,7 @@
       <Diagram DiagramId="0ce2aed0693b484687392dd2122ef4a7" Name="Diagram1">
         <EntityTypeShape EntityType="StoreDbModel.User" Width="1.5" PointX="3.375" PointY="0.75" />
         <EntityTypeShape EntityType="StoreDbModel.Product" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="StoreDbModel.Log" Width="1.5" PointX="5.5" PointY="1.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

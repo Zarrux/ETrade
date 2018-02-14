@@ -28,9 +28,9 @@
                 <li>
                     @Html.ActionLink("Logout", "Logout", "Home")
                 </li>
-                    }
-                       else
-                            {
+}
+else
+{
                 <li>
                     @Html.ActionLink(@Resources.Resources.Register, "Register", "Registration")
                 </li>
@@ -38,9 +38,15 @@
                     @Html.ActionLink(@Resources.Resources.Login, "Login", "Login")
                 </li>
                 <li>
-                    @Html.ActionLink("Logout", "Logout", "Home")
+                    @Html.ActionLink("Logout", "Logout", "Login")
                 </li>
-                        }
+                <li>
+                    @Html.ActionLink("Get Logs", "GetLogs", "Logging")
+                </li>
+                <li>
+                    @Html.ActionLink("Import Product", "ProductImport", "ProductImport")
+                </li>
+}
 
                 </ul>
             </div>
