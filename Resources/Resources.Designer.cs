@@ -61,7 +61,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 50 characters.
+        ///   Looks up a localized string similar to Active.
         /// </summary>
         public static string Active {
             get {
@@ -70,34 +70,16 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Active.
-        /// </summary>
-        public static string ActiveRequired {
-            get {
-                return ResourceManager.GetString("ActiveRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Only between 18 and 100.
-        /// </summary>
-        public static string AgeRange {
-            get {
-                return ResourceManager.GetString("AgeRange", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Add the Age.
         /// </summary>
-        public static string AgeRequired {
+        public static string Age {
             get {
-                return ResourceManager.GetString("AgeRequired", resourceCulture);
+                return ResourceManager.GetString("Age", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 50 characters.
+        ///   Looks up a localized string similar to Category.
         /// </summary>
         public static string Category {
             get {
@@ -106,29 +88,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add the Category.
+        ///   Looks up a localized string similar to ConfirmPassword.
         /// </summary>
-        public static string CategoryRequired {
+        public static string ConfirmPassword {
             get {
-                return ResourceManager.GetString("CategoryRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 50 characters.
-        /// </summary>
-        public static string ConfirmPasswordLong {
-            get {
-                return ResourceManager.GetString("ConfirmPasswordLong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The password is mismatch.
-        /// </summary>
-        public static string ConfirmPasswordRequired {
-            get {
-                return ResourceManager.GetString("ConfirmPasswordRequired", resourceCulture);
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
             }
         }
         
@@ -142,47 +106,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add the description.
+        ///   Looks up a localized string similar to Email.
         /// </summary>
-        public static string DescriptionRequired {
+        public static string Email {
             get {
-                return ResourceManager.GetString("DescriptionRequired", resourceCulture);
+                return ResourceManager.GetString("Email", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to This email is invalid, please try again.
+        ///   Looks up a localized string similar to FirstName.
         /// </summary>
-        public static string EmailInvalid {
+        public static string FirstName {
             get {
-                return ResourceManager.GetString("EmailInvalid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add email.
-        /// </summary>
-        public static string EmailRequired {
-            get {
-                return ResourceManager.GetString("EmailRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 50 characters.
-        /// </summary>
-        public static string FirstNameLong {
-            get {
-                return ResourceManager.GetString("FirstNameLong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add the name.
-        /// </summary>
-        public static string FirstNameRequired {
-            get {
-                return ResourceManager.GetString("FirstNameRequired", resourceCulture);
+                return ResourceManager.GetString("FirstName", resourceCulture);
             }
         }
         
@@ -205,65 +142,38 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 255 characters.
+        ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string NameLong {
+        public static string Name {
             get {
-                return ResourceManager.GetString("NameLong", resourceCulture);
+                return ResourceManager.GetString("Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add the name.
+        ///   Looks up a localized string similar to Password.
         /// </summary>
-        public static string NameRequired {
+        public static string Password {
             get {
-                return ResourceManager.GetString("NameRequired", resourceCulture);
+                return ResourceManager.GetString("Password", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 50 characters.
+        ///   Looks up a localized string similar to Phone.
         /// </summary>
-        public static string PasswordLong {
+        public static string Phone {
             get {
-                return ResourceManager.GetString("PasswordLong", resourceCulture);
+                return ResourceManager.GetString("Phone", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add password.
+        ///   Looks up a localized string similar to Price.
         /// </summary>
-        public static string PasswordRequired {
+        public static string Price {
             get {
-                return ResourceManager.GetString("PasswordRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Type only digits, The maximum length is 50 characters.
-        /// </summary>
-        public static string PhoneLong {
-            get {
-                return ResourceManager.GetString("PhoneLong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add phone number.
-        /// </summary>
-        public static string PhoneRequired {
-            get {
-                return ResourceManager.GetString("PhoneRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Price range between 1 to 9999999.
-        /// </summary>
-        public static string PriceMaximum {
-            get {
-                return ResourceManager.GetString("PriceMaximum", resourceCulture);
+                return ResourceManager.GetString("Price", resourceCulture);
             }
         }
         
@@ -286,38 +196,20 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 50 characters.
+        ///   Looks up a localized string similar to Surname.
         /// </summary>
-        public static string SurnameLong {
+        public static string Surname {
             get {
-                return ResourceManager.GetString("SurnameLong", resourceCulture);
+                return ResourceManager.GetString("Surname", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Add the Surname.
+        ///   Looks up a localized string similar to Username.
         /// </summary>
-        public static string SurnameRequired {
+        public static string Username {
             get {
-                return ResourceManager.GetString("SurnameRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The maximum length is 50 characters.
-        /// </summary>
-        public static string UsernameLong {
-            get {
-                return ResourceManager.GetString("UsernameLong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Add username please.
-        /// </summary>
-        public static string UsernameRequired {
-            get {
-                return ResourceManager.GetString("UsernameRequired", resourceCulture);
+                return ResourceManager.GetString("Username", resourceCulture);
             }
         }
     }

@@ -37,7 +37,7 @@ namespace ETrade.Models
         // ErrorMessageResourceName = "ActiveRequired")]
         //[StringLength(50, ErrorMessageResourceType = typeof(Resources.Resources),
         //         ErrorMessageResourceName = "Active")]
-        public string Active { get; set; }
+        public bool Active { get; set; }
 
         //[Display(Name = "Description", ResourceType = typeof(Resources.Resources))]
         //[Required(ErrorMessageResourceType = typeof(Resources.Resources),

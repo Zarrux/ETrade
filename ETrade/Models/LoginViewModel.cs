@@ -27,6 +27,7 @@ namespace ETrade.Models
         //      ErrorMessageResourceName = "PasswordRequired")]
         //[StringLength(50, ErrorMessageResourceType = typeof(Resources.Resources),
         //              ErrorMessageResourceName = "PasswordLong")]
+
         public string Password { get; set; }
     }
 }

@@ -4,12 +4,37 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrade", "ETrade\ETrade.csproj", "{4A2FD5ED-BC06-4E80-ACE5-12B4DC650E30}"
+	ProjectSection(ProjectDependencies) = postProject
+		{85327AAE-6BDE-42DE-B95A-0008A27D51A7} = {85327AAE-6BDE-42DE-B95A-0008A27D51A7}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ETrade.Tests", "ETrade.Tests\ETrade.Tests.csproj", "{35D6D252-213F-4464-BF66-AD36DAB11914}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Store.DAL", "Store.DAL\Store.DAL.csproj", "{9944FA56-F07E-4546-8F6B-C4E301ED759D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SOAP", "SOAP\", "{85327AAE-6BDE-42DE-B95A-0008A27D51A7}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_54284"
+		Debug.AspNetCompiler.PhysicalPath = "SOAP\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54284\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_54284"
+		Release.AspNetCompiler.PhysicalPath = "SOAP\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54284\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "54284"
+		SlnRelativePath = "SOAP\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +58,10 @@ Global
 		{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A66DCB25-5BA4-4DA2-8F9C-D72920758EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85327AAE-6BDE-42DE-B95A-0008A27D51A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85327AAE-6BDE-42DE-B95A-0008A27D51A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85327AAE-6BDE-42DE-B95A-0008A27D51A7}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{85327AAE-6BDE-42DE-B95A-0008A27D51A7}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

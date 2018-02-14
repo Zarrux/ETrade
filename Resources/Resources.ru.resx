@@ -123,7 +123,7 @@
   <data name="ActiveRequired" xml:space="preserve">
     <value>активный</value>
   </data>
-  <data name="AgeRange" xml:space="preserve">
+  <data name="Age" xml:space="preserve">
     <value>Только от 18 до 100</value>
   </data>
   <data name="AgeRequired" xml:space="preserve">
@@ -135,7 +135,7 @@
   <data name="CategoryRequired" xml:space="preserve">
     <value>Добавить категорию</value>
   </data>
-  <data name="ConfirmPasswordLong" xml:space="preserve">
+  <data name="ConfirmPassword" xml:space="preserve">
     <value>Максимальная длина - 50 символов.</value>
   </data>
   <data name="ConfirmPasswordRequired" xml:space="preserve">
@@ -147,7 +147,7 @@
   <data name="DescriptionRequired" xml:space="preserve">
     <value>Добавить описание</value>
   </data>
-  <data name="EmailInvalid" xml:space="preserve">
+  <data name="Email" xml:space="preserve">
     <value>Это сообщение недействительно, повторите попытку</value>
   </data>
   <data name="EmailRequired" xml:space="preserve">
@@ -165,25 +165,25 @@
   <data name="Logout" xml:space="preserve">
     <value>Выйти</value>
   </data>
-  <data name="NameLong" xml:space="preserve">
+  <data name="Name" xml:space="preserve">
     <value>Максимальная длина - 255 символов.</value>
   </data>
   <data name="NameRequired" xml:space="preserve">
     <value>Добавить имя</value>
   </data>
-  <data name="PasswordLong" xml:space="preserve">
+  <data name="Password" xml:space="preserve">
     <value>Максимальная длина - 50 символов.</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
     <value>Добавить пароль</value>
   </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Добавьте номер телефона</value>
+  </data>
   <data name="PhoneLong" xml:space="preserve">
     <value>Введите только цифры, максимальная длина - 50 символов</value>
   </data>
-  <data name="PhoneRequired" xml:space="preserve">
-    <value>Добавьте номер телефона</value>
-  </data>
-  <data name="PriceMaximum" xml:space="preserve">
+  <data name="Price" xml:space="preserve">
     <value>Диапазон цен от 1 до 9999999</value>
   </data>
   <data name="PriceRequired" xml:space="preserve">
@@ -192,13 +192,13 @@
   <data name="Register" xml:space="preserve">
     <value>Зарегистрироваться</value>
   </data>
-  <data name="SurnameLong" xml:space="preserve">
+  <data name="Surname" xml:space="preserve">
     <value>Максимальная длина - 50 символов.</value>
   </data>
   <data name="SurnameRequired" xml:space="preserve">
     <value>Добавить фамилию</value>
   </data>
-  <data name="UsernameLong" xml:space="preserve">
+  <data name="Username" xml:space="preserve">
     <value>Максимальная длина - 50 символов.</value>
   </data>
   <data name="UsernameRequired" xml:space="preserve">

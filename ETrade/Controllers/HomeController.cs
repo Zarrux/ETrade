@@ -11,6 +11,8 @@ using Newtonsoft.Json;
 using System.Configuration;
 using System.Net;
 using System.Data;
+using System.Reflection;
+
 
 namespace ETrade.Controllers
 {
@@ -75,10 +77,12 @@ namespace ETrade.Controllers
                
 
             }
-            int pageSize = 20;
+            int pageSize = 8;
             int pageNumber = (page ?? 1);
             var res = products.Select(MapToModel);
             return View(res.ToPagedList(pageNumber, pageSize));
+
+
         }
 
       
@@ -95,6 +99,54 @@ namespace ETrade.Controllers
             new ProductRepository().Create(MapFromModel(model));
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult Update(int id)
+        {
+            Product pro = null;
+            try
+            {
+                pro = new ProductRepository().GetById(id);
+            }
+            catch (Exception e)
+            {
+
+                throw;
+            }
+            return View(MapToModel(pro));
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update(ProductViewModel product)
+        {
+            if(ModelState.IsValid)
+                try
+                {
+                  new   ProductRepository().Update(MapFromModel(product));
+                    return RedirectToAction("Index");
+                }
+                catch (System.Exception e)
+                {
+
+                    throw;
+                }
+           
+            return View();
+        }
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                new ProductRepository().Remove(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+                return View();
+                
+            }
+            
+        }
+      
 
         private Product MapFromModel(ProductViewModel model)
         {
