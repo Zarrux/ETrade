@@ -12,12 +12,12 @@ using System.Configuration;
 using System.Net;
 using System.Data;
 using System.Reflection;
-using NLog.Fluent;
 using ETrade.Helper;
 using System.IO;
 
 namespace ETrade.Controllers
 {
+    [Authorize]
     public class HomeController : BaseController
     {
         private Store.DAL.Entities.Log log = new Store.DAL.Entities.Log()
@@ -79,11 +79,44 @@ namespace ETrade.Controllers
                 products = products.Where(s => s.Name.ToUpper().Contains(searchString.ToUpper())
                                        || s.Category.ToUpper().Contains(searchString.ToUpper()));
             }
+            //switch (sortOrder)
+            //{
+            //    case "Name_Desc":
+            //        products = products.OrderByDescending(s => s.Name);
+            //            break;
+            //    case "Category":
+            //        products = products.OrderBy(s => s.Category);
+            //        break;
+            //    case "category_desc":
+            //        products = products.OrderByDescending(s => s.Category);
+            //        break;
+            //    case "Price":
+            //        products = products.OrderBy(s => s.Price);
+            //        break;
+            //    case "price_desc":
+            //        products = products.OrderByDescending(s => s.Price);
+            //        break;
+            //    default:
+            //        products = products.OrderBy(s => s.Name);
+            //        break;
+            //}
+
+            products = Sort(products, sortOrder);
+            int pageSize = 8;
+            int pageNumber = (page ?? 1);
+            var res = products.Select(MapToModel);
+            return View(res.ToPagedList(pageNumber, pageSize));
+
+
+        }
+
+        public IQueryable<Product> Sort(IQueryable<Product> products, string sortOrder)
+        {
             switch (sortOrder)
             {
                 case "Name_Desc":
                     products = products.OrderByDescending(s => s.Name);
-                        break;
+                    break;
                 case "Category":
                     products = products.OrderBy(s => s.Category);
                     break;
@@ -99,17 +132,14 @@ namespace ETrade.Controllers
                 default:
                     products = products.OrderBy(s => s.Name);
                     break;
-               
+
 
             }
-            int pageSize = 8;
-            int pageNumber = (page ?? 1);
-            var res = products.Select(MapToModel);
-            return View(res.ToPagedList(pageNumber, pageSize));
 
+            return products;
 
         }
-
+        
        
 
         [HttpGet]
@@ -302,6 +332,8 @@ namespace ETrade.Controllers
             }
             
         }
+
+
 
         private Product MapFromModel(ProductViewModel model)
         {

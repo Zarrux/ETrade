@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace ETrade.Controllers
 {
+    [Authorize]
     public class ProductImportController : Controller
     {
         // GET: ProductImport
@@ -20,7 +21,7 @@ namespace ETrade.Controllers
         {
             var file = Request.Files["fileToImport"];
 
-            if(file == null)
+            if (file == null)
             {
                 ViewBag.Result = "File is missing";
                 return View();
@@ -30,7 +31,7 @@ namespace ETrade.Controllers
             using (var reader = new StreamReader(file.InputStream))
             {
                 string line;
-                while((line = reader.ReadLine()) !=null )
+                while ((line = reader.ReadLine()) != null)
                 {
                     var tokens = line.Split('|');
                     var product = new ProductImportModel();
@@ -38,7 +39,7 @@ namespace ETrade.Controllers
                     product.Name = tokens[0];
                     product.Price = decimal.Parse(tokens[1]);
                     product.Category = tokens[2];
-                    product.Active = bool.Parse( tokens[3]);
+                    product.Active = bool.Parse(tokens[3]);
                     product.Description = tokens[4];
 
                     products.Add(product);

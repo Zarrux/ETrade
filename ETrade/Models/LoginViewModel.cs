@@ -9,25 +9,23 @@ namespace ETrade.Models
 {
     public class LoginViewModel
     {
-       
-       
 
-        //[Display(Name = "UserName / Login", ResourceType = typeof(Resources.Resources))]
-        //[Required(ErrorMessageResourceType = typeof(Resources.Resources),
-        //      ErrorMessageResourceName = "UserNameRequired")]
-        //[StringLength(50, ErrorMessageResourceType = typeof(Resources.Resources),
-        //              ErrorMessageResourceName = "UserNameLong")]
+
+
+
+        [Required(ErrorMessage = "The Username field is required.")]
+
+        [Display(Name = "Username", ResourceType = typeof(Resources.Global))]
 
         public string UserName { get; set; }
 
+
+
+
+        [Required(ErrorMessage = "The Password field is required.")]
        
-
-        //[Display(Name = "Password", ResourceType = typeof(Resources.Resources))]
-        //[Required(ErrorMessageResourceType = typeof(Resources.Resources),
-        //      ErrorMessageResourceName = "PasswordRequired")]
-        //[StringLength(50, ErrorMessageResourceType = typeof(Resources.Resources),
-        //              ErrorMessageResourceName = "PasswordLong")]
-
+        [DataType(DataType.Password)]
+        [Display(Name = "Password", ResourceType = typeof(Resources.Global))]
         public string Password { get; set; }
     }
 }

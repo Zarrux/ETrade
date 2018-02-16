@@ -10,40 +10,34 @@ namespace ETrade.Models
 {
     public class ProductViewModel
     {
+    
         public int Id { get; set; }
-        //[Display(Name = "Name", ResourceType = typeof(Resources.Resources))]
-        //[Required(ErrorMessageResourceType = typeof(Resources.Resources),
-        //    ErrorMessageResourceName = "NameRequired")]
-        //[StringLength(255, ErrorMessageResourceType = typeof(Resources.Resources),
-        //            ErrorMessageResourceName = "NameLong")]
+
+        [Required(ErrorMessage = "The Name field is required.")]
+
+        [StringLength(50)]
+        [Display(Name = "Name", ResourceType = typeof(Resources.Global))]
         public string Name { get; set; }
 
-        //[Display(Name = "Price", ResourceType = typeof(Resources.Resources))]
-        //[Required(ErrorMessageResourceType = typeof(Resources.Resources),
-        //   ErrorMessageResourceName = "PriceRequired")]
-        //[Range(0, 9999999, ErrorMessageResourceType = typeof(Resources.Resources),
-        //           ErrorMessageResourceName = "PriceMaximum")]
+        [Required(ErrorMessage = "The Price field is required.")]
+        [Display(Name = "Price", ResourceType = typeof(Resources.Global))]
+        [Range(1,9999999)]
+
         public Decimal Price { get; set; }
 
-        //[Display(Name = "Category", ResourceType = typeof(Resources.Resources))]
-        //[Required(ErrorMessageResourceType = typeof(Resources.Resources),
-        //  ErrorMessageResourceName = "CategoryRequired")]
-        //[StringLength(50, ErrorMessageResourceType = typeof(Resources.Resources),
-        //          ErrorMessageResourceName = "Category")]
+        [Required(ErrorMessage = "The Category field is required.")]
+        [StringLength(50)]
+        [Display(Name = "Category", ResourceType = typeof(Resources.Global))]
         public string Category { get; set; }
 
-        //[Display(Name = "Active", ResourceType = typeof(Resources.Resources))]
-        //[Required(ErrorMessageResourceType = typeof(Resources.Resources),
-        // ErrorMessageResourceName = "ActiveRequired")]
-        //[StringLength(50, ErrorMessageResourceType = typeof(Resources.Resources),
-        //         ErrorMessageResourceName = "Active")]
+        [Required(ErrorMessage = "The Active field is required.")]
+      
+        [Display(Name = "Active", ResourceType = typeof(Resources.Global))]
         public bool Active { get; set; }
 
-        //[Display(Name = "Description", ResourceType = typeof(Resources.Resources))]
-        //[Required(ErrorMessageResourceType = typeof(Resources.Resources),
-        //ErrorMessageResourceName = "DescriptionRequired")]
-        //[StringLength(255, ErrorMessageResourceType = typeof(Resources.Resources),
-        //        ErrorMessageResourceName = "Description")]
+        [Required(ErrorMessage = "The Description field is required.")]
+        [StringLength(50)]
+        [Display(Name = "Description", ResourceType = typeof(Resources.Global))]
         public string Description { get; set; }
     }
 }

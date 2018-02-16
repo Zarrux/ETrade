@@ -13,6 +13,7 @@ using System.Xml.Schema;
 
 namespace ETrade.Controllers
 {
+    [Authorize]
     public class XMLConverterController : Controller
     {
         private Log log = new Log();

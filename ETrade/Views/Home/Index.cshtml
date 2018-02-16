@@ -1,5 +1,6 @@
 ﻿@model  PagedList.IPagedList<ETrade.Models.ProductViewModel>
 @using PagedList.Mvc;
+@using Resources;
 
 <link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 
@@ -7,7 +8,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>@Resources.Global.Active</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")

@@ -1,0 +1,3 @@
+Pixel|700|Smartphone|true|New
+Samsung|800|Smartphone|true|New
+HTC|800|Smartphone|true|Old

@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace ETrade.Controllers
 {
+    [Authorize]
     public class LoggingController : BaseController
     {
         

@@ -10,6 +10,7 @@ using System.Web.Security;
 
 namespace ETrade.Controllers
 {
+    [AllowAnonymous]
     public class LoginController : BaseController
     {
         // GET: Login
@@ -55,7 +56,7 @@ namespace ETrade.Controllers
                     Expires = DateTime.Now.Add(FormsAuthentication.Timeout)
                 };
                 HttpContext.Response.Cookies.Set(AuthCookie);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
             ModelState.AddModelError("", "User does not exists");
             return View(model);

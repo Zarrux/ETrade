@@ -12,6 +12,7 @@ using System.Web.Mvc;
 
 namespace ETrade.Controllers
 {
+    [AllowAnonymous]
     public class RegistrationController : BaseController
     {
         // GET: Registration
@@ -35,7 +36,7 @@ namespace ETrade.Controllers
                 var user = MapFromModel(model);
                 var repository = new UserRepository();
                 repository.Create(user);
-                return RedirectToAction("Login");
+                return RedirectToAction("Login", "Login");
             }
             return View(model);
         }
