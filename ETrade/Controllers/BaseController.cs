@@ -36,7 +36,7 @@ namespace ETrade.Controllers
 
             }
             Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo(CultureName);
-            Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentCulture;
+            Thread.CurrentThread.CurrentUICulture = Thread.CurrentThread.CurrentCulture;
             return base.BeginExecuteCore(callback, state);
         }
     }
